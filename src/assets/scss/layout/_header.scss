@@ -4,8 +4,19 @@
 /// Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 ///
 
-/* Header */
+#closeButton {
+  width: 1.6rem !important;
+  height: 1.6rem !important;
+  font-weight: bold;
+}
 
+.optionButton {
+  width: 8rem;
+  height: 3.3rem;
+  font-size: 1.2rem;
+}
+
+/* Header */
 #header {
   @include vendor('display', 'flex');
   @include vendor('flex-direction', 'column');
@@ -49,9 +60,11 @@
 
   .content {
     border-style: solid;
+    box-shadow: 0 0 13px _palette(border-bg), 0 0 15px _palette(border-bg);
+
     border-color: _palette(border);
-    border-top-width: _size(border-width);
-    border-bottom-width: _size(border-width);
+    border-width: _size(border-width);
+
     max-width: 100%;
 
     .inner {

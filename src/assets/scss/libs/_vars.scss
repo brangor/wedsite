@@ -14,7 +14,7 @@
 // Size.
 	$size: (
 		border-radius:				4px,
-		border-width:				1px,
+		border-width:				0.5rem,
 		element-height:				2.75rem,
 		element-margin:				2rem
 	);
@@ -31,13 +31,25 @@
 
 // Palette.
 	$palette: (
-		bg:							#1b1f22,
-		bg-alt:						#000000,
+		bg:							#F4C1CA,
+		bg-alt:						#A2DBD2,
 		bg-overlay:					rgba(19,21,25,0.5),
-		fg:							#ffffff,
-		fg-bold:					#ffffff,
+		fg:							#A2DBD2,
+		fg-bold:					#A2DBD2,
 		fg-light:					rgba(255,255,255,0.5),
-		border:						#ffffff,
-		border-bg:					rgba(255,255,255,0.075),
+		border:						red,
+		border-bg:					#FE30A5,
 		border-bg-alt:				rgba(255,255,255,0.175)
+	);
+
+	$pastel98palette: (
+		bg:							#F4C1CA,
+		bg-alt:						#A2DBD2,
+		bg-overlay:					#A2DBD2,
+		fg:							#A2DBD2,
+		fg-bold:					#A2DBD2,
+		fg-light:						#A2DBD2,
+		border:						red,
+		border-bg:					#FE30A5,
+		border-bg-alt:				#FE30A5,
 	);
