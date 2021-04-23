@@ -43,13 +43,9 @@
 	);
 
 	$pastel98palette: (
-		bg:							#F4C1CA,
-		bg-alt:						#A2DBD2,
-		bg-overlay:					#A2DBD2,
-		fg:							#A2DBD2,
-		fg-bold:					#A2DBD2,
-		fg-light:						#A2DBD2,
-		border:						red,
-		border-bg:					#FE30A5,
-		border-bg-alt:				#FE30A5,
+		pink:			#F4C1CA,
+		lightGreen:		#CCFFFF,
+		aqua:			#42C0C0,
+		purple:		#D0A5BF,
+		_98palette(lightGreen): #A2DBD2,
 	);
