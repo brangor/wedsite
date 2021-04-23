@@ -30,13 +30,17 @@ class Main extends React.Component {
           style={{ display: 'none' }}
         >
         <MessageBox
+          title="MEMBER ZONE"
+          message={
+            <>
+              <div class="field-row">
+                <label for="text17">Password</label>
+                <input id="text17" type="text" />
+              </div>
+              <button>Enter</button>
+            </>
+          }
 
-          title="Intro"
-          message="Aenean ornare velit lacus, ac varius enim ullamcorper eu. Proin
-                aliquam facilisis ante interdum congue. Integer mollis, nisl amet
-                convallis, porttitor magna ullamcorper, amet egestas mauris. Ut
-                magna finibus nisi nec lacinia. Nam maximus erat id euismod egestas."
-          buttonText="noice"
           onButtonClick={close}
         >
           {close}
@@ -52,13 +56,12 @@ class Main extends React.Component {
         >
           <MessageBox
 
-            title="Intro"
+            title="work"
             message="Aenean ornare velit lacus, ac varius enim ullamcorper eu. Proin
                   aliquam facilisis ante interdum congue. Integer mollis, nisl amet
                   convallis, porttitor magna ullamcorper, amet egestas mauris. Ut
                   magna finibus nisi nec lacinia. Nam maximus erat id euismod egestas."
             buttonText="noice"
-            onButtonClick={close}
           />
         </article>
 
@@ -71,13 +74,12 @@ class Main extends React.Component {
         >
           <MessageBox
 
-            title="Intro"
+            title="about"
             message="Aenean ornare velit lacus, ac varius enim ullamcorper eu. Proin
                   aliquam facilisis ante interdum congue. Integer mollis, nisl amet
                   convallis, porttitor magna ullamcorper, amet egestas mauris. Ut
                   magna finibus nisi nec lacinia. Nam maximus erat id euismod egestas."
             buttonText="noice"
-            onButtonClick={close}
           />
         </article>
 
@@ -89,7 +91,7 @@ class Main extends React.Component {
           style={{ display: 'none' }}
         >
           <MessageBox
-            title="Intro"
+            title="contact"
             message="Aenean ornare velit lacus, ac varius enim ullamcorper eu. Proin
                   aliquam facilisis ante interdum congue. Integer mollis, nisl amet
                   convallis, porttitor magna ullamcorper, amet egestas mauris. Ut

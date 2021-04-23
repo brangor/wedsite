@@ -3,11 +3,21 @@
 /// html5up.net | @ajlkn
 /// Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 ///
+@import url('https://fonts.googleapis.com/css2?family=Megrim&display=swap');
 
 /* Type */
 
 	html {
 		font-size: 16pt;
+
+
+
+		p {
+			font-family: 'Lato', sans-serif;
+			font-size: 3rem;
+			font-weight: 700;
+		}
+
 
 		@include breakpoint(xlarge) {
 			font-size: 12pt;
@@ -63,7 +73,7 @@
 		font-weight: _font(weight-bold);
 		line-height: 1.5;
 		margin: 0 0 (_size(element-margin) * 0.5) 0;
-		text-transform: uppercase;
+
 		letter-spacing: _font(letter-spacing);
 
 		a {

@@ -32,6 +32,7 @@ const titleBarButtonStyle = {
   height: '1.6rem',
   minWidth: 'unset !important',
   width: '1.6rem',
+  fontSize: '1rem',
   fontWeight: 'bold',
   boxSizing: 'border-box',
   display: 'block',
@@ -54,7 +55,7 @@ const inputBoxStyle = {
 
 const MessageBox = ({ title, message, buttonText, onButtonClick }) => {
   return (
-    <div style={{ width: 600, ...messageStyle}} className="window">
+    <div style={messageStyle} className="window">
       <div className="title-bar" style={titleBarStyle} >
         <div className="title-bar-text">{title}</div>
         <div className="title-bar-controls">
@@ -64,9 +65,11 @@ const MessageBox = ({ title, message, buttonText, onButtonClick }) => {
 
       <div className="window-body">
         <p style={{ textAlign: "center", ...messageBodyStyle }}>{message}</p>
+        { buttonText && (
         <div className="field-row" style={{ justifyContent: "center" }}>
           <button style={optionButtonStyle} onClick={() => onButtonClick}>{buttonText}</button>
         </div>
+        )}
       </div>
     </div>
   );

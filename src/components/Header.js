@@ -1,26 +1,27 @@
 import PropTypes from 'prop-types'
 import React from 'react'
 import "98.css";
+import MessageBox from './MessageBox';
 
 const Header = props => (
   <header id="header" style={props.timeout ? { display: 'none' } : {}}>
     <div className="content">
       <div className="inner">
-        <h3>Amy and Brandon are getting married</h3>
-        <p>
-          Hey, what's the biz on this wedding situation?
-        </p>
-      </div>
-    </div>
-    <nav>
-      <div className="buttonBox">
+      <MessageBox
+        className="inner"
+        title="alert"
+        message={
+        <>
+        <h3>Amy and Brandon <br/> are getting married</h3>
+        <nav>
+          <div className="buttonBox">
             <button
             className="optionButton"
               onClick={() => {
                 props.onOpenArticle('intro')
               }}
             >
-              Intro
+              intro
             </button>
             <button
               className="optionButton"
@@ -28,7 +29,7 @@ const Header = props => (
                 props.onOpenArticle('work')
               }}
             >
-              Work
+              work
             </button>
             <button
               className="optionButton"
@@ -36,7 +37,7 @@ const Header = props => (
                 props.onOpenArticle('about')
               }}
             >
-              About
+              about
             </button>
             <button
               className="optionButton"
@@ -44,11 +45,17 @@ const Header = props => (
                 props.onOpenArticle('contact')
               }}
             >
-              Contact
+              contact
             </button>
           </div>
+        </nav>
+        </>
+        }
+      >
+      </MessageBox>
+      </div>
+    </div>
 
-    </nav>
   </header>
 )
 
