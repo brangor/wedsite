@@ -1,10 +1,6 @@
 import PropTypes from 'prop-types'
 import React from 'react'
-import pic01 from '../images/pic01.jpg'
-import pic02 from '../images/pic02.jpg'
-import pic03 from '../images/pic03.jpg'
 import MessageBox from '../components/MessageBox'
-
 class Main extends React.Component {
   render() {
     let close = (
@@ -30,7 +26,11 @@ class Main extends React.Component {
           style={{ display: 'none' }}
         >
         <MessageBox
+          className={`${this.props.article === 'intro' ? 'active' : ''} ${
+            this.props.articleTimeout ? 'timeout' : ''
+          }`}
           title="MEMBER ZONE"
+          closeIt={() => this.props.onCloseArticle()}
           message={
             <>
               <div class="field-row">
@@ -55,13 +55,12 @@ class Main extends React.Component {
           style={{ display: 'none' }}
         >
           <MessageBox
-
+            closeIt={() => this.props.onCloseArticle()}
             title="work"
             message="Aenean ornare velit lacus, ac varius enim ullamcorper eu. Proin
                   aliquam facilisis ante interdum congue. Integer mollis, nisl amet
                   convallis, porttitor magna ullamcorper, amet egestas mauris. Ut
                   magna finibus nisi nec lacinia. Nam maximus erat id euismod egestas."
-            buttonText="noice"
           />
         </article>
 
@@ -73,7 +72,7 @@ class Main extends React.Component {
           style={{ display: 'none' }}
         >
           <MessageBox
-
+            closeIt={() => this.props.onCloseArticle()}
             title="about"
             message="Aenean ornare velit lacus, ac varius enim ullamcorper eu. Proin
                   aliquam facilisis ante interdum congue. Integer mollis, nisl amet
@@ -91,13 +90,12 @@ class Main extends React.Component {
           style={{ display: 'none' }}
         >
           <MessageBox
+            closeIt={() => this.props.onCloseArticle()}
             title="contact"
             message="Aenean ornare velit lacus, ac varius enim ullamcorper eu. Proin
                   aliquam facilisis ante interdum congue. Integer mollis, nisl amet
                   convallis, porttitor magna ullamcorper, amet egestas mauris. Ut
                   magna finibus nisi nec lacinia. Nam maximus erat id euismod egestas."
-            buttonText="noice"
-            onButtonClick={close}
           />
         </article>
       </div>

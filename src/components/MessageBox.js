@@ -1,4 +1,6 @@
 import * as React from "react";
+
+import PropTypes from 'prop-types';
 import "98.css";
 
 const pastel98 = {
@@ -38,7 +40,6 @@ const titleBarButtonStyle = {
   display: 'block',
   margin: 0,
   padding: '0 !important',
-  margin: 'auto',
   backgroundImage: 'unset',
 }
 const messageStyle = {
@@ -49,17 +50,15 @@ const optionButtonStyle = {
   height: '3.3rem',
   fontSize: '1.2rem',
 }
-const inputBoxStyle = {
-  backgroundColor: pastel98.window.inputBox,
-}
 
-const MessageBox = ({ title, message, buttonText, onButtonClick }) => {
+const MessageBox = ({ title, message, buttonText, buttonFunction, closeIt}) => {
+
   return (
     <div style={messageStyle} className="window">
       <div className="title-bar" style={titleBarStyle} >
         <div className="title-bar-text">{title}</div>
         <div className="title-bar-controls">
-          <button id="closeButton" className={titleBarButtonStyle} aria-label="CloseIt">X</button>
+          <button id="closeButton" onClick={closeIt} className={titleBarButtonStyle} aria-label="CloseIt">X</button>
         </div>
       </div>
 
@@ -67,12 +66,25 @@ const MessageBox = ({ title, message, buttonText, onButtonClick }) => {
         <p style={{ textAlign: "center", ...messageBodyStyle }}>{message}</p>
         { buttonText && (
         <div className="field-row" style={{ justifyContent: "center" }}>
-          <button style={optionButtonStyle} onClick={() => onButtonClick}>{buttonText}</button>
+          <button onClick={buttonFunction} style={optionButtonStyle}>{buttonText}</button>
         </div>
         )}
       </div>
     </div>
   );
 };
+
+MessageBox.propTypes = {
+  title: PropTypes.string,
+  message: PropTypes.string,
+  buttonText: PropTypes.string,
+  buttonFunction: PropTypes.func,
+  closeIt: PropTypes.func,
+}
+
+MessageBox.defaultProps = {
+  title: 'title',
+  message: 'blah',
+}
 
 export default MessageBox;
