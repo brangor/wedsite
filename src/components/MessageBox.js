@@ -23,6 +23,9 @@ const pastel98 = {
 
 const messageBodyStyle = {
   fontSize: '1.4rem',
+  display: 'flex',
+  flexFlow: 'column nowrap',
+  alignItems: 'center'
 }
 
 const titleBarStyle = {
@@ -42,6 +45,11 @@ const titleBarButtonStyle = {
   padding: '0 !important',
   backgroundImage: 'unset',
 }
+const headerStyle={
+  textShadow: '1px 2px black',
+  textAlign: 'center',
+  fontFamily: '"Lato", sans-serif',
+}
 const messageStyle = {
   background: pastel98.window.background,
 }
@@ -49,20 +57,23 @@ const optionButtonStyle = {
   width: '8rem',
   height: '3.3rem',
   fontSize: '1.2rem',
+  marginTop: '1.2rem',
+  marginBottom: '1rem',
 }
 
-const MessageBox = ({ title, message, buttonText, buttonFunction, closeIt}) => {
+const MessageBox = ({ title, header, message, buttonText, buttonFunction, closeIt}) => {
 
   return (
     <div style={messageStyle} className="window">
       <div className="title-bar" style={titleBarStyle} >
-        <div className="title-bar-text">{title}</div>
+        <div className="title-bar-text">{`${title}.exe`}</div>
         <div className="title-bar-controls">
           <button id="closeButton" onClick={closeIt} className={titleBarButtonStyle} aria-label="CloseIt">X</button>
         </div>
       </div>
 
       <div className="window-body">
+        <h2 style={headerStyle}>{header}</h2>
         <p style={{ textAlign: "center", ...messageBodyStyle }}>{message}</p>
         { buttonText && (
         <div className="field-row" style={{ justifyContent: "center" }}>
@@ -80,10 +91,12 @@ MessageBox.propTypes = {
   buttonText: PropTypes.string,
   buttonFunction: PropTypes.func,
   closeIt: PropTypes.func,
+  header: PropTypes.string,
 }
 
 MessageBox.defaultProps = {
   title: 'title',
+  header: 'title',
   message: 'blah',
 }
 

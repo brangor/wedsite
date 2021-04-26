@@ -12,34 +12,36 @@ const Header = props => {
         <MessageBox
           className="inner"
           title="alert"
+          header="Amy and Brandon"
+          closeIt={() => {props.onOpenArticle('memberZone')}}
           message={
           <>
-          <h3>Amy and Brandon <br/> are getting married</h3>
+          <h2>are getting married</h2>
           <nav>
             <div className="buttonBox">
               <button
               className="optionButton"
                 onClick={() => {
-                  props.onOpenArticle('intro')
+                  props.onOpenArticle('when')
                 }}
               >
-                intro
+                when
               </button>
               <button
                 className="optionButton"
                 onClick={() => {
-                  props.onOpenArticle('work')
+                  props.onOpenArticle('where')
                 }}
               >
-                work
+                where
               </button>
               <button
                 className="optionButton"
                 onClick={() => {
-                  props.onOpenArticle('about')
+                  props.onOpenArticle('gallery')
                 }}
               >
-                about
+                love gallery
               </button>
               <button
                 className="optionButton"

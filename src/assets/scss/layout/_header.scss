@@ -49,12 +49,6 @@
   }
 
   .content {
-    border-style: solid;
-    box-shadow: 0 0 13px _pastelpalette(purple), 0 0 15px _pastelpalette(purple);
-
-    border-color: _pastelpalette(aqua);
-    border-width: _size(border-width);
-
     max-width: 100%;
     background-color: _pastelpalette(aqua);
 
@@ -85,6 +79,10 @@
       // -webkit-text-stroke:lightblue;
       // -webkit-text-stroke-width: 3px;
 		}
+    h2 {
+      font-family: 'Lato', sans-serif;
+      text-shadow: 1px 2px black;
+    }
 
     p {
 
@@ -101,9 +99,10 @@
       display: flex;
       flex-flow: row nowrap;
       justify-content: space-evenly;
+      margin-top: 2rem;
 
       button {
-        margin-left: 1rem;
+
       }
     }
 

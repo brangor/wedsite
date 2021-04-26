@@ -19,16 +19,13 @@ class Main extends React.Component {
         style={this.props.timeout ? { display: 'flex' } : { display: 'none' }}
       >
         <article
-          id="intro"
-          className={`${this.props.article === 'intro' ? 'active' : ''} ${
+          id="memberZone"
+          className={`${this.props.article === 'memberZone' ? 'active' : ''} ${
             this.props.articleTimeout ? 'timeout' : ''
           }`}
           style={{ display: 'none' }}
         >
         <MessageBox
-          className={`${this.props.article === 'intro' ? 'active' : ''} ${
-            this.props.articleTimeout ? 'timeout' : ''
-          }`}
           title="MEMBER ZONE"
           closeIt={() => this.props.onCloseArticle()}
           message={
@@ -37,10 +34,10 @@ class Main extends React.Component {
                 <label for="text17">Password</label>
                 <input id="text17" type="text" />
               </div>
-              <button>Enter</button>
             </>
           }
-
+          header="The A&B Love Zone"
+          buttonText="Submit"
           onButtonClick={close}
         >
           {close}
@@ -48,15 +45,16 @@ class Main extends React.Component {
         </article>
 
         <article
-          id="work"
-          className={`${this.props.article === 'work' ? 'active' : ''} ${
+          id="where"
+          className={`${this.props.article === 'where' ? 'active' : ''} ${
             this.props.articleTimeout ? 'timeout' : ''
           }`}
           style={{ display: 'none' }}
         >
           <MessageBox
             closeIt={() => this.props.onCloseArticle()}
-            title="work"
+            title="where"
+            header="Where will it be?"
             message="Aenean ornare velit lacus, ac varius enim ullamcorper eu. Proin
                   aliquam facilisis ante interdum congue. Integer mollis, nisl amet
                   convallis, porttitor magna ullamcorper, amet egestas mauris. Ut
@@ -65,15 +63,35 @@ class Main extends React.Component {
         </article>
 
         <article
-          id="about"
-          className={`${this.props.article === 'about' ? 'active' : ''} ${
+          id="when"
+          className={`${this.props.article === 'when' ? 'active' : ''} ${
             this.props.articleTimeout ? 'timeout' : ''
           }`}
           style={{ display: 'none' }}
         >
           <MessageBox
             closeIt={() => this.props.onCloseArticle()}
-            title="about"
+            title="when"
+            header="When is it?"
+            message="Aenean ornare velit lacus, ac varius enim ullamcorper eu. Proin
+                  aliquam facilisis ante interdum congue. Integer mollis, nisl amet
+                  convallis, porttitor magna ullamcorper, amet egestas mauris. Ut
+                  magna finibus nisi nec lacinia. Nam maximus erat id euismod egestas."
+            buttonText="noice"
+          />
+        </article>
+
+        <article
+          id="gallery"
+          className={`${this.props.article === 'gallery' ? 'active' : ''} ${
+            this.props.articleTimeout ? 'timeout' : ''
+          }`}
+          style={{ display: 'none' }}
+        >
+          <MessageBox
+            closeIt={() => this.props.onCloseArticle()}
+            title="gallery"
+            header="Love Gallery"
             message="Aenean ornare velit lacus, ac varius enim ullamcorper eu. Proin
                   aliquam facilisis ante interdum congue. Integer mollis, nisl amet
                   convallis, porttitor magna ullamcorper, amet egestas mauris. Ut
@@ -92,10 +110,20 @@ class Main extends React.Component {
           <MessageBox
             closeIt={() => this.props.onCloseArticle()}
             title="contact"
-            message="Aenean ornare velit lacus, ac varius enim ullamcorper eu. Proin
-                  aliquam facilisis ante interdum congue. Integer mollis, nisl amet
-                  convallis, porttitor magna ullamcorper, amet egestas mauris. Ut
-                  magna finibus nisi nec lacinia. Nam maximus erat id euismod egestas."
+            header="Get in touch"
+            message={
+              <>
+                <div className="field-row-stacked" style={{'width': '300px'}}>
+                  <label for="textName">Name:</label>
+                  <input id="textName" type="text" />
+                </div>
+                <div className="field-row-stacked" style={{'width': '300px'}}>
+                  <label for="textMessage">Message:</label>
+                  <textarea id="textMessage" rows="8"></textarea>
+                </div>
+              </>
+            }
+            buttonText="submit"
           />
         </article>
       </div>
