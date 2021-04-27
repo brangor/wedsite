@@ -77,11 +77,15 @@
 			color: _pastelpalette(aqua);
   		text-shadow: 0 0 13px lightblue, 0 0 15px _pastelpalette(purple);
       // -webkit-text-stroke:lightblue;
+      -webkit-text-stroke-width: 1px;
+      -webkit-text-stroke-color: black;
       // -webkit-text-stroke-width: 3px;
 		}
     h2 {
       font-family: 'Lato', sans-serif;
       text-shadow: 1px 2px black;
+      -webkit-text-stroke-width: 1px;
+      -webkit-text-stroke-color: black;
     }
 
     p {

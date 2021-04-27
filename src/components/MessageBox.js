@@ -49,6 +49,8 @@ const headerStyle={
   textShadow: '1px 2px black',
   textAlign: 'center',
   fontFamily: '"Lato", sans-serif',
+  '-webkit-text-stroke-width': '1px',
+  '-webkit-text-stroke-color': 'black',
 }
 const messageStyle = {
   background: pastel98.window.background,
