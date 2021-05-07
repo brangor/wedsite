@@ -2,6 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 import { StaticQuery, graphql } from 'gatsby'
+import favicon from '../images/favicon-32x32.png';
 
 import '../assets/scss/main.scss'
 
@@ -12,12 +13,18 @@ const Layout = ({ children, location }) => {
   if (location && location.pathname === '/') {
     content = (
       <div>
+        <Helmet>
+          <link rel="icon" href={favicon} />
+        </Helmet>
         {children}
       </div>
     )
   } else {
     content = (
       <div id="wrapper" className="page">
+        <Helmet>
+          <link rel="icon" href={favicon} />
+        </Helmet>
         <div>
           {children}
         </div>
@@ -51,6 +58,7 @@ const Layout = ({ children, location }) => {
         </>
       )}
     />
+
   )
 }
 
