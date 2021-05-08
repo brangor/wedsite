@@ -1,6 +1,5 @@
-import PropTypes from 'prop-types'
-import React from 'react'
-import "98.css";
+import PropTypes from 'prop-types';
+import React from 'react';
 import MessageBox from './MessageBox';
 
 const Header = props => {

@@ -1,7 +1,6 @@
 import * as React from "react";
 
 import PropTypes from 'prop-types';
-import "98.css";
 
 const pastel98 = {
   titleBar: {

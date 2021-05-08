@@ -73,10 +73,9 @@ class Main extends React.Component {
             closeIt={() => this.props.onCloseArticle()}
             title="when"
             header="When is it?"
-            message="Aenean ornare velit lacus, ac varius enim ullamcorper eu. Proin
-                  aliquam facilisis ante interdum congue. Integer mollis, nisl amet
-                  convallis, porttitor magna ullamcorper, amet egestas mauris. Ut
-                  magna finibus nisi nec lacinia. Nam maximus erat id euismod egestas."
+            message={
+              <h1>Soon!</h1>
+            }
             buttonText="noice"
           />
         </article>

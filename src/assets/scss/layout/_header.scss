@@ -10,12 +10,6 @@
   font-weight: bold;
 }
 
-.optionButton {
-  width: 8rem;
-  height: 3.3rem;
-  font-size: 1.2rem;
-}
-
 /* Header */
 #header {
   @include vendor('display', 'flex');
@@ -95,13 +89,9 @@
   nav {
     .buttonBox {
       display: flex;
-      flex-flow: row nowrap;
+      flex-flow: row wrap;
       justify-content: space-evenly;
       margin-top: 2rem;
-
-      button {
-
-      }
     }
 
 
@@ -157,13 +147,17 @@
     }
 
     .content {
-      .inner {
-        padding: 2.5rem 1rem;
-      }
-
       p {
         line-height: 1.875;
       }
+
+      // .buttonBox {
+      //   flex-wrap: wrap;
+
+      //   button {
+      //     margin-left: 50%;
+      //   }
+      // }
     }
   }
 
