@@ -11,11 +11,10 @@ const Header = props => {
         <MessageBox
           className="inner"
           title="alert"
-          header="Amy and Brandon"
+          header="Amy and Brandon are getting married"
           closeIt={() => {props.onOpenArticle('memberZone')}}
           message={
           <>
-          <h2>are getting married</h2>
           <nav>
             <div className="buttonBox">
               <button

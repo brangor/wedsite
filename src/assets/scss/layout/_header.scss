@@ -86,17 +86,6 @@
 
   }
 
-  nav {
-    .buttonBox {
-      display: flex;
-      flex-flow: row wrap;
-      justify-content: space-evenly;
-      margin-top: 2rem;
-    }
-
-
-  }
-
   .body.is-article-visible & {
     @include vendor('transform', 'scale(0.95)');
     // @include vendor('filter', 'blur(0.1rem)');
@@ -163,12 +152,6 @@
 
   @include breakpoint(xsmall) {
     padding: 1.5rem 0;
-
-    .content {
-      .inner {
-        padding: 2.5rem 0;
-      }
-    }
 
     nav {
       ul {

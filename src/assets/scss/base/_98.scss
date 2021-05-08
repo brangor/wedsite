@@ -152,6 +152,17 @@ button {
   padding: 0;
 }
 
+.buttonBox {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+  margin-top: 2rem;
+
+  button {
+    margin: 0.1rem;
+  }
+}
+
 .vertical-bar {
   width: 4px;
   height: 20px;

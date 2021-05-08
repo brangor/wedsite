@@ -72,11 +72,28 @@ class Main extends React.Component {
           <MessageBox
             closeIt={() => this.props.onCloseArticle()}
             title="when"
-            header="When is it?"
+            header="How soon is it?"
             message={
-              <h1>Soon!</h1>
+              <>
+                <h1>Soon!</h1>
+                <p>
+                  We'll be getting married on <strong>July 23, 2021</strong> in
+                  Waikanae, New Zealand (about 60km North of Wellington).
+                  It's going to be a small ceremony, with grub and booze aplenty.
+                </p>
+                <p>
+                  For our global friends and family, we'll be livestreaming the
+                  wedding and brainstorming ways to keep it exciting and fun for
+                  those that we can't have physically present. We love you, and
+                  some day soon when the world's more opened up, we'll celebrate
+                  with you.
+                </p>
+                <div class="buttonBox">
+                  <button>Remote Viewing</button>
+                  <button>The Venue</button>
+                </div>
+              </>
             }
-            buttonText="noice"
           />
         </article>
 
@@ -122,7 +139,6 @@ class Main extends React.Component {
                 </div>
               </>
             }
-            buttonText="submit"
           />
         </article>
       </div>
