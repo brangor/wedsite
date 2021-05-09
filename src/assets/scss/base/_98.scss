@@ -16,7 +16,7 @@
   --dialog-blue-light: #363653;
   --dialog-gray: #808080;
   --dialog-gray-light: #b5b5b5;
-  --dialog-background: #000;
+  --dialog-background: #F2FFFF;
   --link-blue: #0000ff;
 
   /* Text */
@@ -459,6 +459,7 @@ input[type="password"],
 input[type="email"],
 select,
 textarea {
+  color: black;
   padding: 3px 4px;
   border: none;
   box-shadow: var(--border-field);

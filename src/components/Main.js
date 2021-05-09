@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types'
 import React from 'react'
 import MessageBox from '../components/MessageBox'
+import outside from '../images/riverbank/outside.jpeg';
 class Main extends React.Component {
   render() {
     let close = (
@@ -55,10 +56,28 @@ class Main extends React.Component {
             closeIt={() => this.props.onCloseArticle()}
             title="where"
             header="Where will it be?"
-            message="Aenean ornare velit lacus, ac varius enim ullamcorper eu. Proin
-                  aliquam facilisis ante interdum congue. Integer mollis, nisl amet
-                  convallis, porttitor magna ullamcorper, amet egestas mauris. Ut
-                  magna finibus nisi nec lacinia. Nam maximus erat id euismod egestas."
+            message={
+              <>
+                <p>
+                  In <strong>Waikanae, New Zealand,</strong> at a beautiful
+                  spot nestled in some foresty goodness.
+                </p>
+                <img src={outside} style={{ maxWidth: '33rem', marginBottom: '0.5rem' }}/>
+                <p>
+                  There are lots of nice spots to stay nearby if you're coming
+                  a long distance to see us. There's even some decent
+                  campgrounds if you're feeling like you can handle a wet
+                  Wellington winter <strong>(please don't do this)</strong>.
+                </p>
+                <p>
+                  We'll have the fire blazing and lots of space to relax and enjoy the time with each other.
+                </p>
+                <div className="buttonBox">
+                  <button>Remote Viewing</button>
+                  <button>Recommended accomodations</button>
+                </div>
+              </>
+            }
           />
         </article>
 
