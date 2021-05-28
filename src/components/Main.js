@@ -62,7 +62,7 @@ class Main extends React.Component {
                   In <strong>Waikanae, New Zealand,</strong> at a beautiful
                   spot nestled in some foresty goodness.
                 </p>
-                <img src={outside} style={{ maxWidth: '33rem', marginBottom: '0.5rem' }}/>
+                <img src={outside} style={{ maxWidth: '100%', marginBottom: '0.5rem' }}/>
                 <p>
                   There are lots of nice spots to stay nearby if you're coming
                   a long distance to see us. There's even some decent
