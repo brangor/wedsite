@@ -20,13 +20,6 @@ const pastel98 = {
   }
 }
 
-const windowStyle = {
-  transition: 'max-height .75s ease,padding .75s ease,opacity .325s ease-in-out',
-  transitionDelay: '.25s',
-  padding: '.5rem',
-  background: pastel98.colors.aqua,
-}
-
 const messageBodyStyle = {
   fontSize: '1.4rem',
   display: 'flex',
@@ -71,24 +64,22 @@ const optionButtonStyle = {
 const MessageBox = ({ title, header, message, buttonText, buttonFunction, closeIt}) => {
 
   return (
-    <div style={windowStyle}>
-      <div style={messageStyle} className="window">
-        <div className="title-bar" style={titleBarStyle} >
-          <div className="title-bar-text">{`${title}.exe`}</div>
-          <div className="title-bar-controls">
-            <button id="closeButton" onClick={closeIt} className={titleBarButtonStyle} aria-label="CloseIt">X</button>
-          </div>
+    <div style={messageStyle} className="window">
+      <div className="title-bar" style={titleBarStyle} >
+        <div className="title-bar-text">{`${title}.exe`}</div>
+        <div className="title-bar-controls">
+          <button id="closeButton" onClick={closeIt} className={titleBarButtonStyle} aria-label="CloseIt">X</button>
         </div>
+      </div>
 
-        <div className="window-body">
-          <h2 style={headerStyle}>{header}</h2>
-          <p style={{ textAlign: "center", ...messageBodyStyle }}>{message}</p>
-          { buttonText && (
-          <div className="field-row" style={{ justifyContent: "center" }}>
-            <button onClick={buttonFunction} style={optionButtonStyle}>{buttonText}</button>
-          </div>
-          )}
+      <div className="window-body">
+        <h2 style={headerStyle}>{header}</h2>
+        <p style={{ textAlign: "center", ...messageBodyStyle }}>{message}</p>
+        { buttonText && (
+        <div className="field-row" style={{ justifyContent: "center" }}>
+          <button onClick={buttonFunction} style={optionButtonStyle}>{buttonText}</button>
         </div>
+        )}
       </div>
     </div>
   );

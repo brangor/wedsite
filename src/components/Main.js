@@ -2,6 +2,15 @@ import PropTypes from 'prop-types'
 import React from 'react'
 import MessageBox from '../components/MessageBox'
 import outside from '../images/riverbank/outside.jpeg';
+
+const articleStyle = {
+  display: 'none',
+  transition: 'max-height .75s ease,padding .75s ease,opacity .325s ease-in-out',
+  transitionDelay: '.25s',
+  padding: '.5rem',
+  background: '#42C0C0',
+}
+
 class Main extends React.Component {
   render() {
     let close = (
@@ -24,7 +33,7 @@ class Main extends React.Component {
           className={`${this.props.article === 'memberZone' ? 'active' : ''} ${
             this.props.articleTimeout ? 'timeout' : ''
           }`}
-          style={{ display: 'none' }}
+          style={articleStyle}
         >
         <MessageBox
           title="MEMBER ZONE"
@@ -50,7 +59,7 @@ class Main extends React.Component {
           className={`${this.props.article === 'where' ? 'active' : ''} ${
             this.props.articleTimeout ? 'timeout' : ''
           }`}
-          style={{ display: 'none' }}
+          style={articleStyle}
         >
           <MessageBox
             closeIt={() => this.props.onCloseArticle()}
@@ -86,7 +95,7 @@ class Main extends React.Component {
           className={`${this.props.article === 'when' ? 'active' : ''} ${
             this.props.articleTimeout ? 'timeout' : ''
           }`}
-          style={{ display: 'none' }}
+          style={articleStyle}
         >
           <MessageBox
             closeIt={() => this.props.onCloseArticle()}
@@ -121,7 +130,7 @@ class Main extends React.Component {
           className={`${this.props.article === 'gallery' ? 'active' : ''} ${
             this.props.articleTimeout ? 'timeout' : ''
           }`}
-          style={{ display: 'none' }}
+          style={articleStyle}
         >
           <MessageBox
             closeIt={() => this.props.onCloseArticle()}
@@ -140,23 +149,39 @@ class Main extends React.Component {
           className={`${this.props.article === 'contact' ? 'active' : ''} ${
             this.props.articleTimeout ? 'timeout' : ''
           }`}
-          style={{ display: 'none' }}
+          style={articleStyle}
         >
           <MessageBox
             closeIt={() => this.props.onCloseArticle()}
-            title="contact"
-            header="Get in touch"
+            title="RSVP"
+            header="RSVP"
+            buttonText="Submit"
             message={
-              <>
+              <div>
                 <div className="field-row-stacked" style={{'width': '300px'}}>
                   <label for="textName">Name:</label>
                   <input id="textName" type="text" />
                 </div>
+                <fieldset>
+                  <div className="field-row">I will be attending</div>
+                  <div className="field-row">
+                    <input id="radio10" type="radio" name="fieldset-example" />
+                    <label for="radio10">Online</label>
+                  </div>
+                  <div className="field-row">
+                    <input id="radio11" type="radio" name="fieldset-example" />
+                    <label for="radio11">In person</label>
+                  </div>
+                  <div className="field-row">
+                    <input id="radio12" type="radio" name="fieldset-example" />
+                    <label for="radio12">I won't! Just saying hey!</label>
+                  </div>
+                </fieldset>
                 <div className="field-row-stacked" style={{'width': '300px'}}>
                   <label for="textMessage">Message:</label>
                   <textarea id="textMessage" rows="8"></textarea>
                 </div>
-              </>
+              </div>
             }
           />
         </article>
