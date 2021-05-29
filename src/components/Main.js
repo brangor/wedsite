@@ -11,6 +11,18 @@ const articleStyle = {
   background: '#42C0C0',
 }
 
+const galleryStyle = {
+  display: 'flex',
+  flexFlow: 'column wrap',
+  width: '100%',
+  padding: '5rem'
+}
+
+const galleryRowStyle = {
+  display: 'flex',
+  flexFlow: 'row nowrap',
+}
+
 class Main extends React.Component {
   render() {
     let close = (
@@ -117,8 +129,7 @@ class Main extends React.Component {
                   with you.
                 </p>
                 <div class="buttonBox">
-                  <button>Remote Viewing</button>
-                  <button>The Venue</button>
+                  <button>nav goes here</button>
                 </div>
               </>
             }
@@ -136,10 +147,27 @@ class Main extends React.Component {
             closeIt={() => this.props.onCloseArticle()}
             title="gallery"
             header="Love Gallery"
-            message="Aenean ornare velit lacus, ac varius enim ullamcorper eu. Proin
-                  aliquam facilisis ante interdum congue. Integer mollis, nisl amet
-                  convallis, porttitor magna ullamcorper, amet egestas mauris. Ut
-                  magna finibus nisi nec lacinia. Nam maximus erat id euismod egestas."
+            message={
+              <>
+                <div className="loveGallery" style={galleryStyle}>
+                  <div className="loveGallery-row" style={galleryRowStyle}>
+                    <image src="https://via.placeholder.com/350"></image>
+                    <image src="https://via.placeholder.com/350"></image>
+                    <image src="https://via.placeholder.com/350"></image>
+                  </div>
+                  <div className="loveGallery-row" style={galleryRowStyle}>
+                    <image src="https://via.placeholder.com/350"></image>
+                    <image src="https://via.placeholder.com/350"></image>
+                    <image src="https://via.placeholder.com/350"></image>
+                  </div>
+                  <div className="loveGallery-row" style={galleryRowStyle}>
+                    <image src="https://via.placeholder.com/350"></image>
+                    <image src="https://via.placeholder.com/350"></image>
+                    <image src="https://via.placeholder.com/350"></image>
+                  </div>
+                </div>
+              </>
+            }
             buttonText="noice"
           />
         </article>
