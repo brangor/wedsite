@@ -13,14 +13,7 @@ const articleStyle = {
 
 const galleryStyle = {
   display: 'flex',
-  flexFlow: 'column wrap',
-  width: '100%',
-  padding: '5rem'
-}
-
-const galleryRowStyle = {
-  display: 'flex',
-  flexFlow: 'row nowrap',
+  flexDirection: 'column',
 }
 
 class Main extends React.Component {
@@ -52,7 +45,7 @@ class Main extends React.Component {
           closeIt={() => this.props.onCloseArticle()}
           message={
             <>
-              <div class="field-row">
+              <div className="field-row">
                 <label for="text17">Password</label>
                 <input id="text17" type="text" />
               </div>
@@ -128,7 +121,7 @@ class Main extends React.Component {
                   some day soon when the world's more opened up, we'll celebrate
                   with you.
                 </p>
-                <div class="buttonBox">
+                <div className="buttonBox">
                   <button>nav goes here</button>
                 </div>
               </>
@@ -147,27 +140,10 @@ class Main extends React.Component {
             closeIt={() => this.props.onCloseArticle()}
             title="gallery"
             header="Love Gallery"
-            message={
-              <>
-                <div className="loveGallery" style={galleryStyle}>
-                  <div className="loveGallery-row" style={galleryRowStyle}>
-                    <image src="https://via.placeholder.com/350"></image>
-                    <image src="https://via.placeholder.com/350"></image>
-                    <image src="https://via.placeholder.com/350"></image>
-                  </div>
-                  <div className="loveGallery-row" style={galleryRowStyle}>
-                    <image src="https://via.placeholder.com/350"></image>
-                    <image src="https://via.placeholder.com/350"></image>
-                    <image src="https://via.placeholder.com/350"></image>
-                  </div>
-                  <div className="loveGallery-row" style={galleryRowStyle}>
-                    <image src="https://via.placeholder.com/350"></image>
-                    <image src="https://via.placeholder.com/350"></image>
-                    <image src="https://via.placeholder.com/350"></image>
-                  </div>
-                </div>
-              </>
-            }
+            message=
+            {<div className="loveGallery" style={galleryStyle}>
+              <image src={require('../images/loveGallery/5.png')}></image>
+            </div>}
             buttonText="noice"
           />
         </article>
@@ -184,33 +160,34 @@ class Main extends React.Component {
             title="RSVP"
             header="RSVP"
             buttonText="Submit"
-            message={
-              <div>
-                <div className="field-row-stacked" style={{'width': '300px'}}>
-                  <label for="textName">Name:</label>
-                  <input id="textName" type="text" />
-                </div>
-                <fieldset>
-                  <div className="field-row">I will be attending</div>
-                  <div className="field-row">
-                    <input id="radio10" type="radio" name="fieldset-example" />
-                    <label for="radio10">Online</label>
-                  </div>
-                  <div className="field-row">
-                    <input id="radio11" type="radio" name="fieldset-example" />
-                    <label for="radio11">In person</label>
-                  </div>
-                  <div className="field-row">
-                    <input id="radio12" type="radio" name="fieldset-example" />
-                    <label for="radio12">I won't! Just saying hey!</label>
-                  </div>
-                </fieldset>
-                <div className="field-row-stacked" style={{'width': '300px'}}>
-                  <label for="textMessage">Message:</label>
-                  <textarea id="textMessage" rows="8"></textarea>
-                </div>
-              </div>
-            }
+            message="Hello!"
+            // {
+            //   <div>
+            //     <div className="field-row-stacked" style={{'width': '300px'}}>
+            //       <label for="textName">Name:</label>
+            //       <input id="textName" type="text" />
+            //     </div>
+            //     <fieldset>
+            //       <div className="field-row">I will be attending</div>
+            //       <div className="field-row">
+            //         <input id="radio10" type="radio" name="fieldset-example" />
+            //         <label for="radio10">Online</label>
+            //       </div>
+            //       <div className="field-row">
+            //         <input id="radio11" type="radio" name="fieldset-example" />
+            //         <label for="radio11">In person</label>
+            //       </div>
+            //       <div className="field-row">
+            //         <input id="radio12" type="radio" name="fieldset-example" />
+            //         <label for="radio12">I won't! Just saying hey!</label>
+            //       </div>
+            //     </fieldset>
+            //     <div className="field-row-stacked" style={{'width': '300px'}}>
+            //       <label for="textMessage">Message:</label>
+            //       <textarea id="textMessage" rows="8"></textarea>
+            //     </div>
+            //   </div>
+            // }
           />
         </article>
       </div>
