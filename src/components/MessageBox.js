@@ -61,7 +61,7 @@ const optionButtonStyle = {
   marginBottom: '1rem',
 }
 
-const MessageBox = ({ title, header, message, buttonText, buttonFunction, closeIt}) => {
+const MessageBox = ({ title, header, message, hasBackButton, closeIt}) => {
 
   return (
     <div style={messageStyle} className="window">
@@ -75,9 +75,9 @@ const MessageBox = ({ title, header, message, buttonText, buttonFunction, closeI
       <div className="window-body">
         <h2 style={headerStyle}>{header}</h2>
         <p style={{ textAlign: "center", ...messageBodyStyle }}>{message}</p>
-        { buttonText && (
+        { hasBackButton && (
         <div className="field-row" style={{ justifyContent: "center" }}>
-          <button onClick={buttonFunction} style={optionButtonStyle}>{buttonText}</button>
+          <button onClick={closeIt} style={optionButtonStyle}>Home</button>
         </div>
         )}
       </div>
@@ -88,8 +88,7 @@ const MessageBox = ({ title, header, message, buttonText, buttonFunction, closeI
 MessageBox.propTypes = {
   title: PropTypes.string,
   message: PropTypes.string,
-  buttonText: PropTypes.string,
-  buttonFunction: PropTypes.func,
+  hasBackButton: PropTypes.bool,
   closeIt: PropTypes.func,
   header: PropTypes.string,
 }
@@ -98,6 +97,7 @@ MessageBox.defaultProps = {
   title: 'title',
   header: 'title',
   message: 'blah',
+  hasBackButton: false,
 }
 
 export default MessageBox;
