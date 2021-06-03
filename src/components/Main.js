@@ -11,11 +11,6 @@ const articleStyle = {
   background: '#42C0C0',
 }
 
-const galleryStyle = {
-  display: 'flex',
-  flexDirection: 'column',
-}
-
 class Main extends React.Component {
   render() {
     let close = (
@@ -54,6 +49,7 @@ class Main extends React.Component {
           header="The A&B Love Zone"
           buttonText="Submit"
           onButtonClick={close}
+          hasBackButton={true}
         >
           {close}
         </MessageBox>
@@ -70,6 +66,7 @@ class Main extends React.Component {
             closeIt={() => this.props.onCloseArticle()}
             title="where"
             header="Where will it be?"
+            hasBackButton={true}
             message={
               <>
                 <p>
@@ -86,10 +83,6 @@ class Main extends React.Component {
                 <p>
                   We'll have the fire blazing and lots of space to relax and enjoy the time with each other.
                 </p>
-                <div className="buttonBox">
-                  <button>Remote Viewing</button>
-                  <button>Recommended accomodations</button>
-                </div>
               </>
             }
           />
@@ -106,6 +99,7 @@ class Main extends React.Component {
             closeIt={() => this.props.onCloseArticle()}
             title="when"
             header="How soon is it?"
+            hasBackButton={true}
             message={
               <>
                 <h1>Soon!</h1>
@@ -121,15 +115,12 @@ class Main extends React.Component {
                   some day soon when the world's more opened up, we'll celebrate
                   with you.
                 </p>
-                <div className="buttonBox">
-                  <button>nav goes here</button>
-                </div>
               </>
             }
           />
         </article>
 
-        <article
+        {/* <article
           id="gallery"
           className={`${this.props.article === 'gallery' ? 'active' : ''} ${
             this.props.articleTimeout ? 'timeout' : ''
@@ -146,7 +137,7 @@ class Main extends React.Component {
             </div>}
             buttonText="noice"
           />
-        </article>
+        </article> */}
 
         <article
           id="contact"
@@ -157,37 +148,15 @@ class Main extends React.Component {
         >
           <MessageBox
             closeIt={() => this.props.onCloseArticle()}
+            hasBackButton={true}
+            message={
+              <>
+                <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSe9RviXz_MLY9d18jcx71rqybIIK3G7QBgXi8h46L3JUxHGLQ/viewform?embedded=true" width="500" height="1200" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+              </>
+            }
             title="RSVP"
             header="RSVP"
             buttonText="Submit"
-            message="Hello!"
-            // {
-            //   <div>
-            //     <div className="field-row-stacked" style={{'width': '300px'}}>
-            //       <label for="textName">Name:</label>
-            //       <input id="textName" type="text" />
-            //     </div>
-            //     <fieldset>
-            //       <div className="field-row">I will be attending</div>
-            //       <div className="field-row">
-            //         <input id="radio10" type="radio" name="fieldset-example" />
-            //         <label for="radio10">Online</label>
-            //       </div>
-            //       <div className="field-row">
-            //         <input id="radio11" type="radio" name="fieldset-example" />
-            //         <label for="radio11">In person</label>
-            //       </div>
-            //       <div className="field-row">
-            //         <input id="radio12" type="radio" name="fieldset-example" />
-            //         <label for="radio12">I won't! Just saying hey!</label>
-            //       </div>
-            //     </fieldset>
-            //     <div className="field-row-stacked" style={{'width': '300px'}}>
-            //       <label for="textMessage">Message:</label>
-            //       <textarea id="textMessage" rows="8"></textarea>
-            //     </div>
-            //   </div>
-            // }
           />
         </article>
       </div>
