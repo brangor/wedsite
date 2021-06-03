@@ -33,14 +33,14 @@ const Header = props => {
               >
                 where
               </button>
-              {/* <button
+              <button
                 className="optionButton"
                 onClick={() => {
-                  props.onOpenArticle('gallery')
+                  props.onOpenArticle('contribute')
                 }}
               >
-                love gallery
-              </button> */}
+                make a contribution
+              </button>
               <button
                 className="optionButton"
                 onClick={() => {

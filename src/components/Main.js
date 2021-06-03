@@ -140,6 +140,35 @@ class Main extends React.Component {
             buttonText="noice"
           />
         </article> */}
+        <article
+          id="contribute"
+          className={`${this.props.article === 'contribute' ? 'active' : ''} ${
+            this.props.articleTimeout ? 'timeout' : ''
+          }`}
+          style={articleStyle}
+        >
+          <MessageBox
+            closeIt={() => this.props.onCloseArticle()}
+            hasBackButton={true}
+            message={
+              <>
+                <a href="paypal.me/BrandonMikel">
+                  <button>
+                    Paypal
+                  </button>
+                </a>
+                <a href="mailto:brandonmikel@gmail.com">
+                  <button>
+                    Email me
+                  </button>
+                </a>
+              </>
+            }
+            title="RSVP"
+            header="RSVP"
+            buttonText="Submit"
+          />
+        </article>
 
         <article
           id="contact"
