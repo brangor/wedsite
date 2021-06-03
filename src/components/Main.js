@@ -9,6 +9,8 @@ const articleStyle = {
   transitionDelay: '.25s',
   padding: '.5rem',
   background: '#42C0C0',
+  borderRadius: '0',
+  minWidth: '500px',
 }
 
 class Main extends React.Component {
