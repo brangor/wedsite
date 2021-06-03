@@ -3,6 +3,14 @@ import React from 'react'
 import MessageBox from '../components/MessageBox'
 import outside from '../images/riverbank/outside.jpeg';
 
+const articleStyle = {
+  display: 'none',
+  transition: 'max-height .75s ease,padding .75s ease,opacity .325s ease-in-out',
+  transitionDelay: '.25s',
+  padding: '.5rem',
+  background: '#42C0C0',
+}
+
 class Main extends React.Component {
   render() {
     let close = (
@@ -25,14 +33,14 @@ class Main extends React.Component {
           className={`${this.props.article === 'memberZone' ? 'active' : ''} ${
             this.props.articleTimeout ? 'timeout' : ''
           }`}
-          style={{ display: 'none' }}
+          style={articleStyle}
         >
         <MessageBox
           title="MEMBER ZONE"
           closeIt={() => this.props.onCloseArticle()}
           message={
             <>
-              <div class="field-row">
+              <div className="field-row">
                 <label for="text17">Password</label>
                 <input id="text17" type="text" />
               </div>
@@ -52,7 +60,7 @@ class Main extends React.Component {
           className={`${this.props.article === 'where' ? 'active' : ''} ${
             this.props.articleTimeout ? 'timeout' : ''
           }`}
-          style={{ display: 'none' }}
+          style={articleStyle}
         >
           <MessageBox
             closeIt={() => this.props.onCloseArticle()}
@@ -65,7 +73,7 @@ class Main extends React.Component {
                   In <strong>Waikanae, New Zealand,</strong> at a beautiful
                   spot nestled in some foresty goodness.
                 </p>
-                <img src={outside} style={{ maxWidth: '33rem', marginBottom: '0.5rem' }}/>
+                <img src={outside} style={{ maxWidth: '100%', marginBottom: '0.5rem' }}/>
                 <p>
                   There are lots of nice spots to stay nearby if you're coming
                   a long distance to see us. There's even some decent
@@ -85,7 +93,7 @@ class Main extends React.Component {
           className={`${this.props.article === 'when' ? 'active' : ''} ${
             this.props.articleTimeout ? 'timeout' : ''
           }`}
-          style={{ display: 'none' }}
+          style={articleStyle}
         >
           <MessageBox
             closeIt={() => this.props.onCloseArticle()}
@@ -117,16 +125,16 @@ class Main extends React.Component {
           className={`${this.props.article === 'gallery' ? 'active' : ''} ${
             this.props.articleTimeout ? 'timeout' : ''
           }`}
-          style={{ display: 'none' }}
+          style={articleStyle}
         >
           <MessageBox
             closeIt={() => this.props.onCloseArticle()}
             title="gallery"
             header="Love Gallery"
-            message="Aenean ornare velit lacus, ac varius enim ullamcorper eu. Proin
-                  aliquam facilisis ante interdum congue. Integer mollis, nisl amet
-                  convallis, porttitor magna ullamcorper, amet egestas mauris. Ut
-                  magna finibus nisi nec lacinia. Nam maximus erat id euismod egestas."
+            message=
+            {<div className="loveGallery" style={galleryStyle}>
+              <image src={require('../images/loveGallery/5.png')}></image>
+            </div>}
             buttonText="noice"
           />
         </article> */}
@@ -136,18 +144,19 @@ class Main extends React.Component {
           className={`${this.props.article === 'contact' ? 'active' : ''} ${
             this.props.articleTimeout ? 'timeout' : ''
           }`}
-          style={{ display: 'none' }}
+          style={articleStyle}
         >
           <MessageBox
             closeIt={() => this.props.onCloseArticle()}
             hasBackButton={true}
-            title="contact"
-            header="Get in touch"
             message={
               <>
                 <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSe9RviXz_MLY9d18jcx71rqybIIK3G7QBgXi8h46L3JUxHGLQ/viewform?embedded=true" width="500" height="1200" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
               </>
             }
+            title="RSVP"
+            header="RSVP"
+            buttonText="Submit"
           />
         </article>
       </div>
