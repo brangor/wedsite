@@ -13,6 +13,10 @@ const articleStyle = {
   minWidth: '500px',
 }
 
+const bankAccountDetailsStyle = {
+  marginRight: 'auto',
+}
+
 class Main extends React.Component {
   render() {
     let close = (
@@ -154,22 +158,56 @@ class Main extends React.Component {
               <>
                 <p>If you'd like to support us in this marriage adventure, we'd be happy to take your dough.</p>
                 <div class="buttonBox">
-                  <a href="https://paypal.me/BrandonMikel">
-                    <button>
-                      Paypal
-                    </button>
-                  </a>
-                  <a href="mailto:brandonmikel@gmail.com">
-                    <button>
-                      Bank details
-                    </button>
-                  </a>
+                  <div class="window">
+                    <div class="title-bar">
+                      <div class="title-bar-text">NZ Friends</div>
+                    </div>
+                    <div class="window-body">
+                      <span className="bankAccountDetails" style={bankAccountDetailsStyle}>
+                        <p>Brandon Mikel and Amy O'Connell<br/>38-9018-0298598-00</p>
+                      </span>
+                    </div>
+                  </div>
+                  <div class="window">
+                    <div class="title-bar">
+                      <div class="title-bar-text">USA Pals</div>
+                    </div>
+                    <div class="window-body">
+                      <div class="buttonBox">
+                        <a href="https://paypal.me/BrandonMikel">
+                          <button>
+                            Paypal
+                          </button>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </>
             }
             title="Contribute"
             header="Thanks for supporting us!"
             buttonText="Submit"
+          />
+        </article>
+
+        <article
+          id="bankAccount"
+          className={`${this.props.article === 'bankAccount' ? 'active' : ''} ${
+            this.props.articleTimeout ? 'timeout' : ''
+          }`}
+          style={articleStyle}
+        >
+          <MessageBox
+            closeIt={() => this.props.onCloseArticle()}
+            hasBackButton={true}
+            message={
+              <>
+
+              </>
+            }
+            title="bank"
+            header="NZ Bank Account"
           />
         </article>
 

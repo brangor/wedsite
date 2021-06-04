@@ -96,6 +96,8 @@ ul.tree-view,
   font-family: "Pixelated MS Sans Serif", Arial;
   -webkit-font-smoothing: none;
   font-size: 11px;
+  background: linear-gradient(90deg, #42C0C0, #D0A5BF);
+  font-size: 1.2rem;
 }
 
 h1,
@@ -206,17 +208,12 @@ button:disabled,
 
 .window {
   box-shadow: var(--border-window-outer), var(--border-window-inner);
-  background: var(--surface);
+  background: #F4C1CA;
   padding: 3px;
 }
 
 .title-bar {
-  background: linear-gradient(
-    90deg,
-    var(--dialog-blue-dark),
-    var(--dialog-blue),
-    var(--dialog-blue-light)
-  );
+  background: linear-gradient(90deg, #42C0C0, #D0A5BF);
   padding: 3px 2px 3px 3px;
   display: flex;
   justify-content: space-between;
