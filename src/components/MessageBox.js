@@ -49,6 +49,8 @@ const headerStyle={
   textAlign: 'center',
   fontFamily: '"Lato", sans-serif',
   maxWidth: '33rem',
+  marginLeft: 'auto',
+  marginRight: 'auto',
 }
 const messageStyle = {
   background: pastel98.window.background,

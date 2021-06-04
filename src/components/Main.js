@@ -152,20 +152,23 @@ class Main extends React.Component {
             hasBackButton={true}
             message={
               <>
-                <a href="paypal.me/BrandonMikel">
-                  <button>
-                    Paypal
-                  </button>
-                </a>
-                <a href="mailto:brandonmikel@gmail.com">
-                  <button>
-                    Email me
-                  </button>
-                </a>
+                <p>If you'd like to support us in this marriage adventure, we'd be happy to take your dough.</p>
+                <div class="buttonBox">
+                  <a href="https://paypal.me/BrandonMikel">
+                    <button>
+                      Paypal
+                    </button>
+                  </a>
+                  <a href="mailto:brandonmikel@gmail.com">
+                    <button>
+                      Bank details
+                    </button>
+                  </a>
+                </div>
               </>
             }
-            title="RSVP"
-            header="RSVP"
+            title="Contribute"
+            header="Thanks for supporting us!"
             buttonText="Submit"
           />
         </article>

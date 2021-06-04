@@ -36,18 +36,18 @@ const Header = props => {
               <button
                 className="optionButton"
                 onClick={() => {
-                  props.onOpenArticle('contribute')
+                  props.onOpenArticle('contact')
                 }}
               >
-                make a contribution
+                RSVP
               </button>
               <button
                 className="optionButton"
                 onClick={() => {
-                  props.onOpenArticle('contact')
+                  props.onOpenArticle('contribute')
                 }}
               >
-                contact
+                Support us
               </button>
             </div>
           </nav>
