@@ -14,7 +14,7 @@
 	// Ensures page width is always >=320px.
 		@include breakpoint(xsmall) {
 			html, body {
-				min-width: 320px;
+				min-width: 90%;
 			}
 		}
 

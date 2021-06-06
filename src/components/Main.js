@@ -10,7 +10,7 @@ const articleStyle = {
   padding: '.5rem',
   background: '#42C0C0',
   borderRadius: '0',
-  minWidth: '500px',
+  minWidth: '90%',
 }
 
 const bankAccountDetailsStyle = {
@@ -79,9 +79,9 @@ class Main extends React.Component {
                   In <strong>Waikanae, New Zealand,</strong> at a beautiful
                   spot nestled in some foresty goodness.
                 </p>
-                <img src={outside} style={{ maxWidth: '100%', marginBottom: '0.5rem' }}/>
+                <img src={outside} style={{ maxWidth: '85%', paddingBottom: '1rem' }}/>
                 <p>
-                  There are lots of nice spots to stay nearby if you're coming
+                  There are lots of nice spots to stay in Wellington if you're coming
                   a long distance to see us. There's even some decent
                   campgrounds if you're feeling like you can handle a wet
                   Wellington winter <strong>(please don't do this)</strong>.
@@ -89,6 +89,16 @@ class Main extends React.Component {
                 <p>
                   We'll have the fire blazing and lots of space to relax and enjoy the time with each other.
                 </p>
+                <h4>What to wear</h4>
+                <p>
+                  Feel free to wear something warm and cozy. A little dressed up is recommended, but no need to bring out the crystal slippers.
+                </p>
+                <div className="window">
+                <h4 className="title-bar">Schedule</h4>
+                  <p>
+                    We're still preparing our schedule. As long as you've RSVPed, we'll email you when it's available.
+                  </p>
+                </div>
               </>
             }
           />
@@ -156,7 +166,13 @@ class Main extends React.Component {
             hasBackButton={true}
             message={
               <>
-                <p>If you'd like to support us in this marriage adventure, we'd be happy to take your dough.</p>
+                <p>
+                  As Amy and I have built a life together we already have everything we need. The best gift we could ask for is your company at our wedding.
+                </p>
+                <p>
+                  However, should you wish to help us celebrate with a gift, you can use the bank/paypal details below. There will also be a Wishing Well available on the day.
+                </p>
+
                 <div class="buttonBox">
                   <div class="window">
                     <div class="title-bar">
@@ -223,7 +239,7 @@ class Main extends React.Component {
             hasBackButton={true}
             message={
               <>
-                <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSe9RviXz_MLY9d18jcx71rqybIIK3G7QBgXi8h46L3JUxHGLQ/viewform?embedded=true" width="500" height="1200" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+                <iframe className="message-box__form" src="https://docs.google.com/forms/d/e/1FAIpQLSe9RviXz_MLY9d18jcx71rqybIIK3G7QBgXi8h46L3JUxHGLQ/viewform?embedded=true" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
               </>
             }
             title="RSVP"

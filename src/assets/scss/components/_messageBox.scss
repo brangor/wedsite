@@ -1,0 +1,66 @@
+.freebirdFormviewerViewFooterFooterContainer {
+  display: none !important;
+}
+
+.message-box {
+  background: #F4C1CA;
+
+  &__body {
+    font-size: 1.4rem;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+  }
+
+  &__form {
+    width: 95%;
+    height: 1200px;
+  }
+
+  &__header {
+    text-shadow: 1px 2px 5px black;
+    text-align: center;
+    font-family: "Lato", sans-serif;
+    max-width: 33rem;
+    margin-left: auto;
+    margin-right: auto;
+
+    &-text {
+      text-align: center;
+    }
+  }
+
+
+  &__title-bar-button {
+    height: 1.6rem;
+    min-width: unset !important;
+    width: 1.6rem;
+    font-size: 1rem;
+    font-weight: bold;
+    box-sizing: border-box;
+    display: block;
+    margin: 0;
+    padding: 0 !important;
+    background-image: unset;
+  }
+
+  &__button {
+    width: 8rem;
+    height: 3.3rem;
+    font-size: 1.2rem;
+    margin-top: 1.2rem;
+    margin-bottom: 1rem;
+  }
+}
+
+/* Portrait */
+@media only screen
+  and (max-device-width: 667px) {
+    .message-box__form {
+      height: 1400px;
+    }
+    #wrapper {
+      padding-left: 0px !important;
+      padding-right: 0px !important;
+    }
+}
