@@ -81,22 +81,20 @@ class Main extends React.Component {
                 </p>
                 <img src={outside} style={{ maxWidth: '85%', paddingBottom: '1rem' }}/>
                 <p>
-                  There are lots of nice spots to stay in Wellington if you're coming
-                  a long distance to see us. There's even some decent
-                  campgrounds if you're feeling like you can handle a wet
-                  Wellington winter <strong>(please don't do this)</strong>.
-                </p>
-                <p>
                   We'll have the fire blazing and lots of space to relax and enjoy the time with each other.
                 </p>
                 <h4>What to wear</h4>
                 <p>
                   Feel free to wear something warm and cozy. A little dressed up is recommended, but no need to bring out the crystal slippers.
                 </p>
+                <p>
+                  There's a no shoe policy in the house, so please avoid wearing pointy heels and scuffy shoes. We'll have Sally checking gumboots at the entrance.
+                </p>
                 <div className="window">
                 <h4 className="title-bar">Schedule</h4>
+                  <p>The ceremony will begin at 12PM, <br/> feel free to start arriving from 11:30AM.</p>
                   <p>
-                    We're still preparing our schedule. As long as you've RSVPed, we'll email you when it's available.
+                    We're still preparing our schedule. <br/> As long as you've RSVPed, we'll <br/>email you when it's available.
                   </p>
                 </div>
               </>
@@ -122,7 +120,7 @@ class Main extends React.Component {
                 <p>
                   We'll be getting married on <strong>July 23, 2021</strong> in
                   Waikanae, New Zealand (about 60km North of Wellington).
-                  It's going to be a small ceremony and a lunch, starting around 11:30AM (NZT) and going until about 3PM.
+                  It's going to be a small ceremony and a lunch, starting at 12PM (NZT).
                 </p>
                 <p>
                   For our global friends and family, we'll be livestreaming the
@@ -170,7 +168,7 @@ class Main extends React.Component {
                   As Amy and I have built a life together we already have everything we need. The best gift we could ask for is your company at our wedding.
                 </p>
                 <p>
-                  However, should you wish to help us celebrate with a gift, you can use the bank/paypal details below. There will also be a Wishing Well available on the day.
+                  However, should you wish to help us celebrate with a gift, you can use the bank/paypal details below.
                 </p>
 
                 <div class="buttonBox">
