@@ -122,7 +122,7 @@ class Main extends React.Component {
                 <p>
                   We'll be getting married on <strong>July 23, 2021</strong> in
                   Waikanae, New Zealand (about 60km North of Wellington).
-                  It's going to be a small ceremony, with grub and booze aplenty.
+                  It's going to be a small ceremony and a lunch, starting around 11:30AM (NZT) and going until about 3PM.
                 </p>
                 <p>
                   For our global friends and family, we'll be livestreaming the
