@@ -305,13 +305,13 @@ class Main extends React.Component {
                   </div>
                   <div class="window mini-info-pane">
                     <div class="title-bar">
-                      <div class="title-bar-text">A third option</div>
+                      <div class="title-bar-text">send us some love</div>
                     </div>
                     <div class="window-body">
                       <div class="buttonBox">
-                        <a href="https://paypal.me/BrandonMikel">
+                        <a href="mailto:brandonmikel+amyoconnell@gmail.com">
                           <button>
-                            get in touch!
+                            get in touch
                           </button>
                         </a>
                       </div>

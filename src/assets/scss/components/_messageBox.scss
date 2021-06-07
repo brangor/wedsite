@@ -16,7 +16,7 @@
 }
 
 .wideboy {
-  width: 90%;
+  width: 90% !important;
 }
 
 .buttonBox {
@@ -27,6 +27,10 @@
 
   button {
     margin: 0.1rem;
+    width: 45%;
+    min-width: 8rem;
+    max-width: 14rem;
+    margin-bottom: 1rem;
   }
 }
 
@@ -106,5 +110,11 @@
     #wrapper {
       padding-left: 0px !important;
       padding-right: 0px !important;
+    }
+    .buttonBox button {
+      width: unset;
+    }
+    .wideboy {
+      width: unset !important;
     }
 }

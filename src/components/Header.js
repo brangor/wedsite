@@ -41,16 +41,6 @@ const Header = props => {
               >
                 schedule
               </button>
-            </div>
-            <div className="buttonBox">
-              <button
-                className="optionButton"
-                onClick={() => {
-                  props.onOpenArticle('gallery')
-                }}
-              >
-                love gallery
-              </button>
               <button
                 className="optionButton"
                 onClick={() => {
@@ -58,6 +48,14 @@ const Header = props => {
                 }}
               >
                 RSVP
+              </button>
+              <button
+                className="optionButton"
+                onClick={() => {
+                  props.onOpenArticle('gallery')
+                }}
+              >
+                love gallery
               </button>
               <button
                 className="optionButton"
