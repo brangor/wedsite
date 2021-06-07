@@ -2,12 +2,12 @@ import * as React from "react";
 
 import PropTypes from 'prop-types';
 
-const MessageBox = ({ title, header, message, hasBackButton, closeIt}) => {
+const MessageBox = ({ title, header, message, hasBackButton, classNames, closeIt}) => {
 
   return (
-    <div className="window message-box">
+    <div className={`window message-box ${classNames}`}>
       <div className="title-bar">
-        <div className="title-bar-text">{`${title}.exe`}</div>
+        <div className="title-bar-text">{`${title}`}</div>
         <div className="title-bar-controls">
           <button id="closeButton" onClick={closeIt} className="message-box__title-bar-button" aria-label="CloseIt">X</button>
         </div>
@@ -32,12 +32,14 @@ MessageBox.propTypes = {
   hasBackButton: PropTypes.bool,
   closeIt: PropTypes.func,
   header: PropTypes.string,
+  classNames: PropTypes.string,
 }
 
 MessageBox.defaultProps = {
   title: 'title',
   header: 'title',
   message: 'blah',
+  classNames: '',
   hasBackButton: false,
 }
 

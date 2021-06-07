@@ -36,6 +36,24 @@ const Header = props => {
               <button
                 className="optionButton"
                 onClick={() => {
+                  props.onOpenArticle('schedule')
+                }}
+              >
+                schedule
+              </button>
+            </div>
+            <div className="buttonBox">
+              <button
+                className="optionButton"
+                onClick={() => {
+                  props.onOpenArticle('gallery')
+                }}
+              >
+                love gallery
+              </button>
+              <button
+                className="optionButton"
+                onClick={() => {
                   props.onOpenArticle('contact')
                 }}
               >

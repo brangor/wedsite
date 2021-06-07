@@ -1,7 +1,78 @@
 import PropTypes from 'prop-types'
 import React from 'react'
 import MessageBox from '../components/MessageBox'
-import outside from '../images/riverbank/outside.jpeg';
+import outside from '../images/riverbank/outside.jpeg'
+
+import amyDance from '../images/gallery/amy-dance.gif'
+import danceOne from '../images/gallery/dance-1.gif'
+import danceTwo from '../images/gallery/dance-2.gif'
+import danceThree from '../images/gallery/dance-3.gif'
+import ltrSktrs from '../images/gallery/ltrsktrs.gif'
+import amyMtn from '../images/gallery/amy-mtn.gif'
+import ab1 from '../images/gallery/1.png'
+import ab2 from '../images/gallery/2.png'
+import ab3 from '../images/gallery/3.png'
+import ab4 from '../images/gallery/4.png'
+import ab5 from '../images/gallery/5.png'
+import ab6 from '../images/gallery/6.png'
+import ab7 from '../images/gallery/7.png'
+import ab8 from '../images/gallery/8.png'
+import ab9 from '../images/gallery/9.png'
+import ab10 from '../images/gallery/10.png'
+import ab11 from '../images/gallery/11.png'
+import ab12 from '../images/gallery/12.png'
+import ab13 from '../images/gallery/13.png'
+import ab14 from '../images/gallery/14.png'
+import ab15 from '../images/gallery/15.png'
+import ab16 from '../images/gallery/16.png'
+import ab17 from '../images/gallery/17.png'
+import ab18 from '../images/gallery/18.png'
+import ab19 from '../images/gallery/19.png'
+import ab20 from '../images/gallery/20.png'
+import ab21 from '../images/gallery/21.png'
+import ab22 from '../images/gallery/22.png'
+import ab23 from '../images/gallery/23.png'
+import ab24 from '../images/gallery/24.png'
+import ab25 from '../images/gallery/25.png'
+import ab26 from '../images/gallery/26.png'
+import ab27 from '../images/gallery/27.png'
+import ab28 from '../images/gallery/28.png'
+import ab29 from '../images/gallery/29.png'
+import ab30 from '../images/gallery/30.png'
+import ab31 from '../images/gallery/31.png'
+import ab32 from '../images/gallery/32.png'
+import ab33 from '../images/gallery/33.png'
+import ab34 from '../images/gallery/34.png'
+import ab35 from '../images/gallery/35.png'
+import ab36 from '../images/gallery/36.png'
+import ab37 from '../images/gallery/37.png'
+
+var listOfImages = shuffle([
+  ab1, ab2, ab3, ab4, ab5, ab6, ab7, ab8, ab9, ab10,
+  ab11, ab12, ab13, ab14, ab15, ab16, ab17, ab18, ab19, ab20,
+  ab21, ab22, ab23, ab24, ab25, ab26, ab27, ab28, ab29, ab30,
+  ab31, ab32, ab33, ab34, ab35, ab36, ab37,
+  amyDance, danceOne, danceTwo, danceThree,
+  ltrSktrs, amyMtn
+]);
+
+function shuffle(array) {
+  var currentIndex = array.length,  randomIndex;
+
+  // While there remain elements to shuffle...
+  while (0 !== currentIndex) {
+
+    // Pick a remaining element...
+    randomIndex = Math.floor(Math.random() * currentIndex);
+    currentIndex--;
+
+    // And swap it with the current element.
+    [array[currentIndex], array[randomIndex]] = [
+      array[randomIndex], array[currentIndex]];
+  }
+
+  return array;
+}
 
 const articleStyle = {
   display: 'none',
@@ -90,13 +161,6 @@ class Main extends React.Component {
                 <p>
                   There's a no shoe policy in the house, so please avoid wearing pointy heels and scuffy shoes. We'll have Sally checking gumboots at the entrance.
                 </p>
-                <div className="window">
-                <h4 className="title-bar">Schedule</h4>
-                  <p>The ceremony will begin at 12PM, <br/> feel free to start arriving from 11:30AM.</p>
-                  <p>
-                    We're still preparing our schedule. <br/> As long as you've RSVPed, we'll <br/>email you when it's available.
-                  </p>
-                </div>
               </>
             }
           />
@@ -129,14 +193,20 @@ class Main extends React.Component {
                   some day soon when the world's more opened up, we'll celebrate
                   with you.
                 </p>
+                <div className="window">
+                <h4 className="title-bar">What time is that for me?</h4>
+                  <a href="https://savvytime.com/converter/new-zealand-wellington-to-tx-dallas-nc-greenville-ca-los-angeles-australia-brisbane/jul-23-2021/12pm">
+                    <button>Find out here!</button>
+                  </a>
+                </div>
               </>
             }
           />
         </article>
 
-        {/* <article
+        <article
           id="gallery"
-          className={`${this.props.article === 'gallery' ? 'active' : ''} ${
+          className={`bigboy wideboy ${this.props.article === 'gallery' ? 'active' : ''} ${
             this.props.articleTimeout ? 'timeout' : ''
           }`}
           style={articleStyle}
@@ -145,13 +215,46 @@ class Main extends React.Component {
             closeIt={() => this.props.onCloseArticle()}
             title="gallery"
             header="Love Gallery"
+            hasBackButton={true}
             message=
-            {<div className="loveGallery" style={galleryStyle}>
-              <image src={require('../images/loveGallery/5.png')}></image>
-            </div>}
+            {
+              <div className="love-gallery">
+                {
+                  listOfImages.map((image, index) =>
+                    <img key={index} src={image} alt="info"></img>
+                  )
+                }
+              </div>
+            }
+          />
+        </article>
+
+        <article
+          id="schedule"
+          className={`${this.props.article === 'schedule' ? 'active' : ''} ${
+            this.props.articleTimeout ? 'timeout' : ''
+          }`}
+          style={articleStyle}
+        >
+          <MessageBox
+            closeIt={() => this.props.onCloseArticle()}
+            title="schedule"
+            header="Schedule"
+            hasBackButton={true}
+            message={
+              <>
+                <p>
+                  The ceremony will begin at <br/><strong>12PM, on July 23rd, New Zealand Time</strong>,<br/> feel free to start arriving from <strong>11:30AM</strong>.
+                </p>
+                <p>
+                  We're still preparing our full schedule. As long as you've RSVPed, we'll email you when it's available.
+                </p>
+              </>
+            }
             buttonText="noice"
           />
-        </article> */}
+        </article>
+
         <article
           id="contribute"
           className={`${this.props.article === 'contribute' ? 'active' : ''} ${
@@ -165,24 +268,28 @@ class Main extends React.Component {
             message={
               <>
                 <p>
-                  As Amy and I have built a life together we already have everything we need. The best gift we could ask for is your company at our wedding.
+                  As Amy and I have built a life together we already have everything we need. The best gift we could ask for is your loving thoughts and your company at our wedding.
                 </p>
                 <p>
                   However, should you wish to help us celebrate with a gift, you can use the bank/paypal details below.
                 </p>
+                <p>
+                  All contributions will help offset costs of putting this fun celebration together, and help us hop into our new lives together with some more financial stability.
+                </p>
 
-                <div class="buttonBox">
-                  <div class="window">
+                <div class="info-panes">
+                  <div class="window maxi-info-pane">
                     <div class="title-bar">
                       <div class="title-bar-text">NZ Friends</div>
                     </div>
                     <div class="window-body">
                       <span className="bankAccountDetails" style={bankAccountDetailsStyle}>
-                        <p>Brandon Mikel and Amy O'Connell<br/>38-9018-0298598-00</p>
+                        <strong>Bank transfer info:</strong>
+                        <p>KiwiBank<br/>Brandon Mikel and Amy O'Connell<br/>38-9018-0298598-00</p>
                       </span>
                     </div>
                   </div>
-                  <div class="window">
+                  <div class="window mini-info-pane">
                     <div class="title-bar">
                       <div class="title-bar-text">USA Pals</div>
                     </div>
@@ -191,6 +298,20 @@ class Main extends React.Component {
                         <a href="https://paypal.me/BrandonMikel">
                           <button>
                             Paypal
+                          </button>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="window mini-info-pane">
+                    <div class="title-bar">
+                      <div class="title-bar-text">A third option</div>
+                    </div>
+                    <div class="window-body">
+                      <div class="buttonBox">
+                        <a href="https://paypal.me/BrandonMikel">
+                          <button>
+                            get in touch!
                           </button>
                         </a>
                       </div>

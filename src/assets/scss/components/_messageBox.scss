@@ -2,14 +2,58 @@
   display: none !important;
 }
 
+.love-gallery {
+  display: flex;
+  flex-flow: row wrap;
+  width: 100%;
+  margin: auto;
+  justify-content: center;
+  img {
+    width: 30%;
+    min-width: 250px;
+    padding: 1rem;
+  }
+}
+
+.wideboy {
+  width: 90%;
+}
+
+.buttonBox {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+  margin-top: 2rem;
+
+  button {
+    margin: 0.1rem;
+  }
+}
+
+.info-panes {
+  display: flex;
+  flex-flow: row wrap;
+
+  .maxi-info-pane {
+    width: 100%;
+  }
+
+  .mini-info-pane {
+    width:50%;
+  }
+
+}
+
 .message-box {
   background: #F4C1CA;
+
 
   &__body {
     font-size: 1.4rem;
     display: flex;
     flex-flow: column nowrap;
     align-items: center;
+    height: fit-content;
   }
 
   &__form {
