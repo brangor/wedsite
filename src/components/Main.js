@@ -187,11 +187,10 @@ class Main extends React.Component {
                   It's going to be a small ceremony and a lunch, starting at 12PM (NZT).
                 </p>
                 <p>
-                  For our global friends and family, we'll be livestreaming the
-                  wedding and brainstorming ways to keep it exciting and fun for
-                  those that we can't have physically present. We love you, and
-                  some day soon when the world's more opened up, we'll celebrate
-                  with you.
+                  For our global friends and family, we'll send out photos and
+                  vids of wedding if you pop your details on our
+                  <strong>RSVP page</strong>. We love you, and some day soon
+                  when the world's more opened up, we'll celebrate with you.
                 </p>
                 <div className="window">
                 <h4 className="title-bar">What time is that for me?</h4>
