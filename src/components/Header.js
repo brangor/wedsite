@@ -57,14 +57,6 @@ const Header = props => {
               >
                 love gallery
               </button>
-              <button
-                className="optionButton"
-                onClick={() => {
-                  props.onOpenArticle('contribute')
-                }}
-              >
-                Support us
-              </button>
             </div>
           </nav>
           </>
