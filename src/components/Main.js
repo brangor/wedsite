@@ -180,24 +180,8 @@ class Main extends React.Component {
             hasBackButton={true}
             message={
               <>
-                <h1>Soon!</h1>
-                <p>
-                  We'll be getting married on <strong>July 23, 2021</strong> in
-                  Waikanae, New Zealand (about 60km North of Wellington).
-                  It's going to be a small ceremony and a lunch, starting at 12PM (NZT).
-                </p>
-                <p>
-                  For our global friends and family, we'll send out photos and
-                  vids of wedding if you pop your details on our
-                  <strong>RSVP page</strong>. We love you, and some day soon
-                  when the world's more opened up, we'll celebrate with you.
-                </p>
-                <div className="window">
-                <h4 className="title-bar">What time is that for me?</h4>
-                  <a href="https://savvytime.com/converter/new-zealand-wellington-to-tx-dallas-nc-greenville-ca-los-angeles-australia-brisbane/jul-23-2021/12pm">
-                    <button>Find out here!</button>
-                  </a>
-                </div>
+                <h1>It already happened!</h1>
+                <p>It's over, sorry!</p>
               </>
             }
           />
@@ -245,103 +229,9 @@ class Main extends React.Component {
                 <p>
                   The ceremony will begin at <br/><strong>12PM, on July 23rd, New Zealand Time</strong>,<br/> feel free to start arriving from <strong>11:30AM</strong>.
                 </p>
-                <p>
-                  We're still preparing our full schedule. As long as you've RSVPed, we'll email you when it's available.
-                </p>
               </>
             }
             buttonText="noice"
-          />
-        </article>
-
-        <article
-          id="contribute"
-          className={`${this.props.article === 'contribute' ? 'active' : ''} ${
-            this.props.articleTimeout ? 'timeout' : ''
-          }`}
-          style={articleStyle}
-        >
-          <MessageBox
-            closeIt={() => this.props.onCloseArticle()}
-            hasBackButton={true}
-            message={
-              <>
-                <p>
-                  As Amy and I have built a life together we already have everything we need. The best gift we could ask for is your loving thoughts and your company at our wedding.
-                </p>
-                <p>
-                  However, should you wish to help us celebrate with a gift, you can use the bank/paypal details below.
-                </p>
-                <p>
-                  All contributions will help offset costs of putting this fun celebration together, and help us hop into our new lives together with some more financial stability.
-                </p>
-
-                <div class="info-panes">
-                  <div class="window maxi-info-pane">
-                    <div class="title-bar">
-                      <div class="title-bar-text">NZ Friends</div>
-                    </div>
-                    <div class="window-body">
-                      <span className="bankAccountDetails" style={bankAccountDetailsStyle}>
-                        <strong>Bank transfer info:</strong>
-                        <p>KiwiBank<br/>Brandon Mikel and Amy O'Connell<br/>38-9018-0298598-00</p>
-                      </span>
-                    </div>
-                  </div>
-                  <div class="window mini-info-pane">
-                    <div class="title-bar">
-                      <div class="title-bar-text">USA Pals</div>
-                    </div>
-                    <div class="window-body">
-                      <div class="buttonBox">
-                        <a href="https://paypal.me/BrandonMikel">
-                          <button>
-                            Paypal
-                          </button>
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="window mini-info-pane">
-                    <div class="title-bar">
-                      <div class="title-bar-text">send us some love</div>
-                    </div>
-                    <div class="window-body">
-                      <div class="buttonBox">
-                        <a href="mailto:brandonmikel+amyoconnell@gmail.com">
-                          <button>
-                            get in touch
-                          </button>
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </>
-            }
-            title="Contribute"
-            header="Thanks for supporting us!"
-            buttonText="Submit"
-          />
-        </article>
-
-        <article
-          id="bankAccount"
-          className={`${this.props.article === 'bankAccount' ? 'active' : ''} ${
-            this.props.articleTimeout ? 'timeout' : ''
-          }`}
-          style={articleStyle}
-        >
-          <MessageBox
-            closeIt={() => this.props.onCloseArticle()}
-            hasBackButton={true}
-            message={
-              <>
-
-              </>
-            }
-            title="bank"
-            header="NZ Bank Account"
           />
         </article>
 
